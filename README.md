@@ -23,3 +23,12 @@ installation you plan to have exposed)
 
 Versions of the software will be automatically downloaded for you, based on the contents
 of `build_env.sh` 
+
+
+# Custom config
+After the build is up, you have to run certain parts or all the post-install.sh script provided
+
+# Todo
+
+docker volume for ssl certificates
+Cors for the applications

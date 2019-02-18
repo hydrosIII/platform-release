@@ -5,10 +5,12 @@ services:
     command: run
     volumes:
       - .tars:/tars
+      - /var/www/html/platform/storage/
     links:
       - mysql
     ports:
       - 80:80
+      - 443:443
     environment:
       MYSQL_HOST: mysql
       MYSQL_DATABASE: ushahidi
@@ -18,6 +20,8 @@ services:
     build:
       context: ./docker/mysql
       dockerfile: Dockerfile
+    volumes:
+      - /var/lib/mysql
     environment:
       MYSQL_DATABASE: ushahidi
       MYSQL_USER: ushahidi
